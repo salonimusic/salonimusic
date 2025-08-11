@@ -2,378 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Saloni Desai — Producer • Performer • Mentor</title>
   <meta name="theme-color" content="#f4effa" />
-  <meta name="description" content="Portfolio of music producer & live performer Saloni Desai. Pastel chaos. Over-the-top art school energy. Streams, videos, services, contact." />
-
-  <!-- Tailwind ONLY -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Tailwind config (only what's used)
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cotton: '#F9FAFB',
-            blush: '#F7D6E0',
-            mint: '#D5F2EA',
-            lilac: '#E9E3FF',
-            lemon: '#FFF7CC',
-            sky: '#DDEBFF',
-            ink: '#0F172A'
-          },
-          boxShadow: {
-            dreamy: '0 10px 30px rgba(60, 64, 67, .08), 0 6px 18px rgba(60, 64, 67, .04)'
-          },
-          keyframes: {
-            float: { 
-              '0%,100%': { transform: 'translateY(0px)' }, 
-              '50%': { transform: 'translateY(-18px)' }
-            },
-            drift: {
-              '0%': { transform: 'translateX(0) rotate(0deg)' },
-              '50%': { transform: 'translateX(12px) rotate(3deg)' },
-              '100%': { transform: 'translateX(0) rotate(0deg)' }
-            },
-            squiggle: {
-              '0%,100%': { filter: 'drop-shadow(0 0 0 rgba(0,0,0,0))' },
-              '50%': { filter: 'drop-shadow(0 6px 10px rgba(0,0,0,.08))' }
-            },
-            marquee: {
-              '0%': { transform: 'translateX(0)' },
-              '100%': { transform: 'translateX(-50%)' }
-            },
-            pulsebg: {
-              '0%,100%': { opacity: .55 },
-              '50%': { opacity: .85 }
-            }
-          },
-          animation: {
-            float: 'float 6s ease-in-out infinite',
-            drift: 'drift 5s ease-in-out infinite',
-            squiggle: 'squiggle 4s ease-in-out infinite',
-            marquee: 'marquee 25s linear infinite',
-            pulsebg: 'pulsebg 8s ease-in-out infinite'
-          },
-          fontFamily: {
-            ui: ['ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Inter','Helvetica Neue','Arial','Noto Sans','sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Font Awesome for proper brand icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
+  <meta name="description" content="Portfolio of music producer, live performer, and singing mentor Saloni Desai. Based in Mumbai, Maharashtra. Offering singing lessons and music production services." />
+  <meta name="keywords" content="singing classes near me, singing lessons Mumbai, vocal coach Mumbai, music production, live performance, Saloni Desai" />
   <style>
-    ::selection{ background:#ffe7ef; color:#111; }
-    html,body{ scroll-behavior:smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4effa;
+      color: #333;
+    }
+    header {
+      background-color: #d4c1ec;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    footer {
+      background-color: #d4c1ec;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .contact-info {
+      margin-top: 10px;
+      font-weight: bold;
+    }
   </style>
 </head>
-
-<body class="font-ui bg-cotton text-ink overflow-x-hidden">
-  <!-- Pastel gradient background blobs (fixed) -->
-  <div class="pointer-events-none fixed inset-0 -z-10">
-    <div class="absolute -top-20 -left-16 h-80 w-80 rounded-full blur-3xl opacity-70 animate-pulsebg"
-         style="background: radial-gradient(120px 120px at 60% 40%, #F7D6E0 0%, rgba(247,214,224,0) 70%), radial-gradient(200px 200px at 30% 70%, #D5F2EA 0%, rgba(213,242,234,0) 60%);"></div>
-    <div class="absolute top-1/4 -right-20 h-96 w-96 rounded-full blur-3xl opacity-70 animate-pulsebg"
-         style="background: radial-gradient(160px 160px at 30% 30%, #E9E3FF 0%, rgba(233,227,255,0) 70%), radial-gradient(160px 160px at 70% 70%, #FFF7CC 0%, rgba(255,247,204,0) 70%); animation-delay:1.2s;"></div>
-    <div class="absolute bottom-[-6rem] left-1/3 h-[28rem] w-[28rem] rounded-full blur-3xl opacity-70 animate-pulsebg"
-         style="background: radial-gradient(200px 200px at 50% 50%, #DDEBFF 0%, rgba(221,235,255,0) 70%); animation-delay:.6s;"></div>
-  </div>
-
-  <!-- Custom pastel cursor trail -->
-  <div id="cursorTrail" class="pointer-events-none fixed inset-0 -z-0"></div>
-
-  <!-- Sticky pastel marquee header -->
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/40 border-b border-white/40">
-    <div class="relative overflow-hidden">
-      <div class="whitespace-nowrap flex items-center gap-12 animate-marquee" style="will-change: transform;">
-        <div class="py-2 text-sm md:text-base font-medium text-ink/70">
-          ✦ SALONI DESAI • PRODUCER ✦ PERFORMER ✦ ACADEMY ✦ EN/HI/GU/MR ✦
-        </div>
-        <div class="py-2 text-sm md:text-base font-medium text-ink/70">
-          ✦ LIVE SETS ✦ PASTEL CHAOS ✦ ART SCHOOL ENERGY ✦ BOOKING OPEN ✦
-        </div>
-      </div>
-      <!-- Duplicate for seamless loop -->
-      <div class="whitespace-nowrap flex items-center gap-12 animate-marquee" style="will-change: transform;">
-        <div class="py-2 text-sm md:text-base font-medium text-ink/70">
-          ✦ SALONI DESAI • PRODUCER ✦ PERFORMER ✦ ACADEMY ✦ EN/HI/GU/MR ✦
-        </div>
-        <div class="py-2 text-sm md:text-base font-medium text-ink/70">
-          ✦ LIVE SETS ✦ PASTEL CHAOS ✦ ART SCHOOL ENERGY ✦ BOOKING OPEN ✦
-        </div>
-      </div>
-    </div>
+<body>
+  <header>
+    <h1>Saloni Desai</h1>
+    <p>Producer • Performer • Mentor</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Main layout: 3 bold view-heights with snap -->
-  <main class="snap-y snap-mandatory h-[calc(100svh-44px)] overflow-y-auto">
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m Saloni Desai — a singer, composer, and music producer based in Mumbai, Maharashtra. I offer one-to-one and group singing lessons for all levels, from beginners to advanced. My lessons are designed to be fun, personal, and focused on your unique voice and musical goals.</p>
+  </section>
 
-    <!-- 1) HERO / INTRO -->
-    <section id="hero" class="relative min-h-[100svh] snap-start flex items-center">
-      <!-- floating stickers -->
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute left-4 sm:left-8 top-20 rotate-6 animate-float">
-          <span class="px-3 sm:px-4 py-2 rounded-full bg-lemon/80 ring-2 ring-white/50 shadow-dreamy text-xs md:text-sm">English • Hindi • Gujarati • Marathi</span>
-        </div>
-        <div class="absolute right-4 sm:right-20 top-16 -rotate-6 animate-drift">
-          <span class="px-3 sm:px-4 py-2 rounded-full bg-mint/80 ring-2 ring-white/50 shadow-dreamy text-xs md:text-sm">Producer • Performer • Mentor</span>
-        </div>
-        <div class="absolute left-1/3 bottom-10 -rotate-3 animate-squiggle">
-          <span class="px-3 py-1 rounded-full bg-lilac/80 ring-2 ring-white/50 shadow-dreamy text-[11px] md:text-xs">Pastel but Loud™</span>
-        </div>
-      </div>
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Private one-to-one singing lessons</li>
+      <li>Group singing lessons</li>
+      <li>Music production & composition</li>
+      <li>Live performance</li>
+    </ul>
+  </section>
 
-      <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <!-- Left copy -->
-        <div class="relative space-y-6">
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            <span class="bg-gradient-to-r from-ink to-ink/40 bg-clip-text text-transparent">Saloni Desai</span>
-          </h1>
-          <p class="text-lg md:text-xl text-ink/80">
-            Live performer who paints rooms with color and cadence. 
-          </p>
-          <p class="text-lg md:text-xl text-ink/80">
-            Music producer crafting luminous, textured pop & indie.
-          </p>
-          <p class="text-lg md:text-xl text-ink/80">
-            Mentor & academy head—helping artists unlock their voice.
-          </p>
-
-          <div class="flex flex-wrap items-center gap-3 pt-3">
-            <!-- Socials (only IG, YT, Spotify) -->
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-               class="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 hover:bg-white transition shadow-dreamy">
-              <i class="fa-brands fa-instagram"></i><span class="text-sm">Instagram</span>
-              <span class="w-10 h-1 ml-2 rounded-full bg-gradient-to-r from-ink/40 to-transparent translate-x-0 group-hover:translate-x-2 transition"></span>
-            </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
-               class="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 hover:bg-white transition shadow-dreamy">
-              <i class="fa-brands fa-youtube"></i><span class="text-sm">YouTube</span>
-              <span class="w-10 h-1 ml-2 rounded-full bg-gradient-to-r from-ink/40 to-transparent translate-x-0 group-hover:translate-x-2 transition"></span>
-            </a>
-            <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" aria-label="Spotify"
-               class="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 hover:bg-white transition shadow-dreamy">
-              <i class="fa-brands fa-spotify"></i><span class="text-sm">Spotify</span>
-              <span class="w-10 h-1 ml-2 rounded-full bg-gradient-to-r from-ink/40 to-transparent translate-x-0 group-hover:translate-x-2 transition"></span>
-            </a>
-
-            <!-- Download Resume (kept as-is with data URI & button) -->
-            <a id="btnResume" class="cursor-pointer inline-flex items-center gap-2 px-5 py-2 rounded-full bg-ink text-white hover:bg-ink/90 transition shadow-dreamy">
-              <i class="fa-solid fa-download"></i><span class="text-sm">Download Resume</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right photo & decorative frames -->
-        <div class="relative">
-          <div class="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-lemon/70 via-lilac/60 to-mint/70 blur-xl opacity-80"></div>
-          <div class="relative rounded-[2rem] overflow-hidden ring-8 ring-white/70 shadow-dreamy">
-            <img alt="Saloni Desai portrait"
-                 src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop"
-                 class="w-full h-[26rem] md:h-[32rem] object-cover object-center">
-            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white/80 to-transparent">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 ring-1 ring-black/5 text-xs">
-                <span>Live • Studio • Academy</span>
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2) MUSIC (Spotify + Highlights + Live) -->
-    <section id="music" class="relative min-h-[100svh] snap-start py-14">
-      <div class="max-w-7xl mx-auto px-6 md:px-10">
-        <div class="flex items-end justify-between mb-8">
-          <h2 class="text-3xl md:text-5xl font-extrabold">Music & Moments</h2>
-          <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" class="text-sm underline decoration-ink/30 hover:decoration-ink">All Releases →</a>
-        </div>
-
-        <!-- Spotify trio -->
-        <div class="grid md:grid-cols-3 gap-6 mb-10">
-          <div class="rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5 shadow-dreamy hover:shadow-xl transition group">
-            <div class="aspect-video bg-sky/50 relative">
-              <iframe style="border-radius:0;" src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT?utm_source=generator" width="100%" height="100%" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-            </div>
-            <div class="p-4">
-              <p class="text-sm text-ink/70">Glitter-pop confetti with a gentle afterglow.</p>
-              <a href="https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm mt-2 underline decoration-ink/30 hover:decoration-ink">Listen on Spotify →</a>
-            </div>
-          </div>
-          <div class="rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5 shadow-dreamy hover:shadow-xl transition group">
-            <div class="aspect-video bg-mint/50 relative">
-              <iframe style="border-radius:0;" src="https://open.spotify.com/embed/track/1301WleyT98MSxVHPZCA6M?utm_source=generator" width="100%" height="100%" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-            </div>
-            <div class="p-4">
-              <p class="text-sm text-ink/70">Late-night indie pulse with soft neon edges.</p>
-              <a href="https://open.spotify.com/track/1301WleyT98MSxVHPZCA6M" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm mt-2 underline decoration-ink/30 hover:decoration-ink">Listen on Spotify →</a>
-            </div>
-          </div>
-          <div class="rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5 shadow-dreamy hover:shadow-xl transition group">
-            <div class="aspect-video bg-lilac/50 relative">
-              <iframe style="border-radius:0;" src="https://open.spotify.com/embed/track/7ouMYWpwJ422jRcDASZB7P?utm_source=generator" width="100%" height="100%" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-            </div>
-            <div class="p-4">
-              <p class="text-sm text-ink/70">Folktronica daydream—strings, beats, breath.</p>
-              <a href="https://open.spotify.com/track/7ouMYWpwJ422jRcDASZB7P" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm mt-2 underline decoration-ink/30 hover:decoration-ink">Listen on Spotify →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- YouTube: Highlights & Live -->
-        <div class="grid lg:grid-cols-2 gap-10">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-xl md:text-2xl font-bold">Highlights</h3>
-              <span class="text-xs px-2 py-1 rounded-full bg-white/70 ring-1 ring-black/5">Top 3</span>
-            </div>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div class="aspect-video rounded-2xl overflow-hidden ring-1 ring-black/5 shadow">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/ysz5S6PUM-U" title="YT highlight 1" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="aspect-video rounded-2xl overflow-hidden ring-1 ring-black/5 shadow">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/oUFJJNQGwhk" title="YT highlight 2" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="aspect-video rounded-2xl overflow-hidden ring-1 ring-black/5 shadow sm:col-span-2">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="YT highlight 3" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-xl md:text-2xl font-bold">Live Performances</h3>
-              <span class="text-xs px-2 py-1 rounded-full bg-white/70 ring-1 ring-black/5">3 videos</span>
-            </div>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div class="aspect-video rounded-2xl overflow-hidden ring-1 ring-black/5 shadow">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Live 1" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="aspect-video rounded-2xl overflow-hidden ring-1 ring-black/5 shadow">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/lX44CAz-JhU" title="Live 2" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="aspect-video rounded-2xl overflow-hidden ring-1 ring-black/5 shadow sm:col-span-2">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="Live 3" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-<!-- 3) SERVICES (full page, centered) -->
-<section id="services" class="relative min-h-[100svh] snap-start py-16 flex">
-  <div class="max-w-7xl mx-auto px-6 md:px-10 w-full">
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Services & Academy</h2>
-      <p class="text-ink/80 text-lg">
-        EN/HI/GU/MR • Artist development, songwriting, production & performance.
-      </p>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>📍 Mumbai, Maharashtra</p>
+      <p>📞 +91 8828406308</p>
+      <p>📧 <a href="mailto:salonidesaimusic@gmail.com">salonidesaimusic@gmail.com</a></p>
     </div>
-
-    <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8 ">
-      <!-- 1-on-1's -->
-      <div class="flex flex-col rounded-3xl p-8 bg-white/70 ring-1 ring-black/5 hover:ring-ink/10 hover:shadow-xl transition shadow-dreamy">
-        <div class="text-4xl mb-4">👤</div>
-        <h4 class="font-bold text-xl mb-3">1-on-1's</h4>
-        <p class="text-sm text-ink/70 flex-grow">
-          Personal coaching tailored to your goals: writing, production, performance.
-        </p>
-        <a
-          class="mt-6 inline-flex items-center justify-center text-sm px-5 py-3 bg-ink text-white rounded-full hover:bg-ink/90"
-          href="mailto:salonisvocademyandstudios@gmail.com?subject=Inquiry%3A%201-on-1%27s%20%28Saloni%20Academy%29&body=Hi%20Saloni%2C%0A%0AI%27m%20interested%20in%201-on-1%27s.%20Please%20find%20my%20details%3A%0A%0AName%3A%20%0AExperience%20level%3A%20%0AGenre%2Fstyle%3A%20%0APreferred%20schedule%2Ftimezone%3A%20%0AGoals%3A%20%0A%0ALinks%20%28optional%29%3A%20%0A%0AThanks%21"
-        >Email to enquire</a>
-      </div>
-
-      <!-- Group Classes -->
-      <div class="flex flex-col rounded-3xl p-8 bg-white/70 ring-1 ring-black/5 hover:ring-ink/10 hover:shadow-xl transition shadow-dreamy">
-        <div class="text-4xl mb-4">👥</div>
-        <h4 class="font-bold text-xl mb-3">Group Classes</h4>
-        <p class="text-sm text-ink/70 flex-grow">
-          Collaborative learning in small cohorts. DAW basics to advanced workflows.
-        </p>
-        <a
-          class="mt-6 inline-flex items-center justify-center text-sm px-5 py-3 bg-ink text-white rounded-full hover:bg-ink/90"
-          href="mailto:salonisvocademyandstudios@gmail.com?subject=Inquiry%3A%20Group%20Classes%20%28Saloni%20Academy%29&body=Hi%20Saloni%2C%0A%0AI%27m%20interested%20in%20Group%20Classes.%20Here%20are%20my%20details%3A%0A%0AName%3A%20%0AExperience%20level%3A%20%0AWhat%20I%20want%20to%20learn%3A%20%0APreferred%20batch%20timings%2Ftimezone%3A%20%0A%0AThanks%21"
-        >Email to enquire</a>
-      </div>
-
-      <!-- Crash Courses -->
-      <div class="flex flex-col rounded-3xl p-8 bg-white/70 ring-1 ring-black/5 hover:ring-ink/10 hover:shadow-xl transition shadow-dreamy">
-        <div class="text-4xl mb-4">⚡</div>
-        <h4 class="font-bold text-xl mb-3">Crash Courses</h4>
-        <p class="text-sm text-ink/70 flex-grow">
-          Weekend intensives focused on one skill: toplining, vocal stacks, live prep.
-        </p>
-        <a
-          class="mt-6 inline-flex items-center justify-center text-sm px-5 py-3 bg-ink text-white rounded-full hover:bg-ink/90"
-          href="mailto:salonisvocademyandstudios@gmail.com?subject=Inquiry%3A%20Crash%20Courses%20%28Saloni%20Academy%29&body=Hi%20Saloni%2C%0A%0AI%27m%20interested%20in%20a%20Crash%20Course.%20Topic%28s%29%20I%20want%3A%20%0APreferred%20dates%3A%20%0ATimezone%3A%20%0A%0AThanks%21"
-        >Email to enquire</a>
-      </div>
+    <div class="social-links">
+      <a href="https://instagram.com/salonidesai" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@salonidesaimusic" target="_blank">YouTube</a>
+      <a href="https://open.spotify.com/artist/yourspotifyid" target="_blank">Spotify</a>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  </main>
-
-  <script>
-    // ===== Download Resume (embedded data URI, button triggers download) =====
-    const RESUME_DATA = 'data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKNCAwIG9iago8PC9UeXBlIC9QYWdlL1BhcmVudCAxIDAgUi9NZWRpYUJveCBbMCAwIDU5NSA4NDJdL0NvbnRlbnRzIDUgMCBSPj4KZW5kb2JqCjUgMCBvYmoKPDwvTGVuZ3RoIDYyPj4Kc3RyZWFtCkJUCi9GMSAyNCBUZgowIDc5MCBUZAooU2Fsb25pIERlc2FpIC0gUmVzdW1lKSBUMCBoCkVuZAplbmRzdHJlYW0KZW5kb2JqCjEgMCBvYmoKPDwvVHlwZSAvUGFnZXMvQ291bnQgMS9LaWRzIFsgNCAwIFIgXSA+PgplbmRvYmoKMiAwIG9iago8PC9UeXBlIC9DYXRhbG9nL1BhZ2VzIDEgMCBSPj4KZW5kb2JqCjMgMCBvYmoKPDwvUHJvZHVjZXIgKEFydC1TY2hvb2wgUGFzdGVsIFBERik+PgplbmRvYmoKeHJlZgowIDgKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDkxIDAwMDAwIG4gCjAwMDAwMDAxNzkgMDAwMDAgbiAKMDAwMDAwMDM0MCAwMDAwMCBuIAowMDAwMDAwMDQ3IDAwMDAwIG4gCjAwMDAwMDAyNjIgMDAwMDAgbiAKdHJhaWxlcgo8PC9TaXplIDgvUm9vdCAyIDAgUi9JbmZvIDMgMCBSPj4Kc3RhcnR4cmVmCjI3NQolJUVPRgo=';
-
-    // Build hidden anchor for resume
-    (function(){
-      const a = document.createElement('a');
-      a.href = RESUME_DATA;
-      a.download = 'Saloni_Desai_Resume.pdf';
-      a.id = 'aResume';
-      a.className = 'hidden';
-      document.body.appendChild(a);
-    })();
-
-    // Attach click to the visible button
-    document.getElementById('btnResume')?.addEventListener('click', () => {
-      document.getElementById('aResume').click();
-    });
-
-    // ===== Cursor Pastel Trail (lightweight, capped) =====
-    const trail = document.getElementById('cursorTrail');
-    const spots = [];
-    function makeSpot(x,y){
-      const s = document.createElement('span');
-      s.className = 'pointer-events-none absolute will-change-transform rounded-full';
-      const size = Math.floor(6 + Math.random()*16);
-      s.style.width = size+'px';
-      s.style.height = size+'px';
-      s.style.left = (x-size/2)+'px';
-      s.style.top = (y-size/2)+'px';
-      s.style.background = ['#F7D6E0','#D5F2EA','#E9E3FF','#FFF7CC','#DDEBFF'][Math.floor(Math.random()*5)];
-      s.style.opacity = '0.9';
-      s.style.transition = 'transform 1.2s ease, opacity 1.2s ease';
-      trail.appendChild(s);
-      requestAnimationFrame(()=>{
-        s.style.transform = translateY(${10+Math.random()*30}px) scale(.2);
-        s.style.opacity = '0';
-      });
-      setTimeout(()=> trail.removeChild(s), 1400);
-      spots.push(s);
-      if(spots.length>60){
-        const a = spots.shift(); 
-        a && a.remove();
-      }
-    }
-    window.addEventListener('mousemove', e => {
-      if(Math.random()>.6) makeSpot(e.clientX, e.clientY);
-    });
-  </script>
+  <footer>
+    <p>&copy; 2025 Saloni Desai. All rights reserved.</p>
+  </footer>
 </body>
 </html>
